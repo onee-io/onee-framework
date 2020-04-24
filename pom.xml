@@ -7,15 +7,23 @@
     <artifactId>onee-framework</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
+
     <name>onee-framework</name>
     <description>Java 项目快速开发框架</description>
     <url>https://framework.onee.io</url>
 
+    <modules>
+        <module>onee-framework-docs</module>
+        <module>onee-framework-dependencies</module>
+        <module>onee-framework-starters</module>
+        <module>onee-framework-redis</module>
+        <module>onee-framework-sdks</module>
+    </modules>
+
     <licenses>
         <license>
-            <name>The Apache Software License, Version 2.0</name>
-            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
-            <distribution>repo</distribution>
+            <name>木兰宽松许可证, 第2版</name>
+            <url>http://license.coscl.org.cn/MulanPSL2</url>
         </license>
     </licenses>
 
@@ -35,15 +43,18 @@
         </developer>
     </developers>
 
-    <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <maven.compiler.source>1.8</maven.compiler.source>
-        <maven.compiler.target>1.8</maven.compiler.target>
-    </properties>
-
-    <dependencies>
-
-    </dependencies>
+    <dependencyManagement>
+        <dependencies>
+            <!-- Own dependencies -->
+            <dependency>
+                <groupId>io.onee.framework</groupId>
+                <artifactId>onee-framework-dependencies</artifactId>
+                <version>${project.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
     <profiles>
         <profile>
