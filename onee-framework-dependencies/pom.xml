@@ -5,7 +5,7 @@
 
     <groupId>io.onee.framework</groupId>
     <artifactId>onee-framework-dependencies</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0.0-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <name>onee-framework-dependencies</name>
@@ -35,6 +35,11 @@
             <dependency>
                 <groupId>io.onee.framework</groupId>
                 <artifactId>onee-framework-dependencies</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.onee.framework</groupId>
+                <artifactId>onee-framework-common</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>

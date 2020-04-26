@@ -5,7 +5,7 @@
 
     <groupId>io.onee.framework</groupId>
     <artifactId>onee-framework</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0.0-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <name>onee-framework</name>
@@ -15,6 +15,7 @@
     <modules>
         <module>onee-framework-docs</module>
         <module>onee-framework-dependencies</module>
+        <module>onee-framework-common</module>
         <module>onee-framework-starters</module>
         <module>onee-framework-redis</module>
         <module>onee-framework-sdks</module>
