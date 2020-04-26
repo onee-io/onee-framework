@@ -11,6 +11,7 @@
 
     <artifactId>onee-framework-common</artifactId>
     <name>onee-framework-common</name>
+    <description>公共类库</description>
 
     <dependencies>
         <dependency>

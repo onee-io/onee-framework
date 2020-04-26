@@ -1,10 +1,11 @@
-package io.onee.framework.common;
+package io.onee.framework.common.web;
 
+import io.onee.framework.common.exception.IErrorCode;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 
 /**
- * 错误码
+ * ap 接口标准错误码
  * 根据阿里《Java开发手册》泰山版定义
  * https://developer.aliyun.com/topic/java2020
  * Created by onee
@@ -12,7 +13,7 @@ import lombok.Getter;
  */
 @Getter
 @AllArgsConstructor
-public enum ResultCode {
+public enum ResultCode implements IErrorCode {
     OK("00000", "ok"),
 
     // 用户端错误
@@ -213,5 +214,5 @@ public enum ResultCode {
     C0503("C0503", "邮件提醒服务失败");
 
     private String code;    // 错误码
-    private String desc;    // 描述
+    private String message; // 错误信息
 }

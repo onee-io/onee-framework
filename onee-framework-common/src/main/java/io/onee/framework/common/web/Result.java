@@ -1,4 +1,4 @@
-package io.onee.framework.common;
+package io.onee.framework.common.web;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude;
@@ -7,7 +7,7 @@ import lombok.Data;
 import java.io.Serializable;
 
 /**
- * 接口标准返回格式
+ * api接口标准返回格式
  * Created by onee
  * Date: 2020/4/26 14:52
  */
@@ -22,12 +22,12 @@ public class Result<T extends Serializable> implements Serializable {
 
     public Result(ResultCode resultCode) {
         this.code = resultCode.getCode();
-        this.message = resultCode.getDesc();
+        this.message = resultCode.getMessage();
     }
 
     public Result(ResultCode resultCode, T data) {
         this.code = resultCode.getCode();
-        this.message = resultCode.getDesc();
+        this.message = resultCode.getMessage();
         this.data = data;
     }
 
