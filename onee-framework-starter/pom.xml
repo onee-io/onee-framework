@@ -9,33 +9,29 @@
         <version>1.0.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>onee-framework-sdks</artifactId>
+    <artifactId>onee-framework-starter</artifactId>
     <packaging>pom</packaging>
 
-    <name>onee-framework-sdks</name>
-    <url>三方接口封装SDK</url>
+    <name>onee-framework-starter</name>
+    <description>开箱即用starter</description>
 
     <modules>
-        <module>onee-framework-sdk-juhe</module>
-        <module>onee-framework-sdk-qiniu</module>
+        <module>onee-framework-starter-redis</module>
     </modules>
 
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
+            <artifactId>spring-boot-configuration-processor</artifactId>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-autoconfigure</artifactId>
         </dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>com.alibaba</groupId>
-            <artifactId>fastjson</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>cn.hutool</groupId>
-            <artifactId>hutool-all</artifactId>
         </dependency>
     </dependencies>
 

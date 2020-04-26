@@ -13,12 +13,12 @@
     <url>https://framework.onee.io</url>
 
     <modules>
-        <module>onee-framework-docs</module>
+        <module>onee-framework-doc</module>
         <module>onee-framework-dependencies</module>
         <module>onee-framework-common</module>
-        <module>onee-framework-starters</module>
+        <module>onee-framework-starter</module>
+        <module>onee-framework-sdk</module>
         <module>onee-framework-redis</module>
-        <module>onee-framework-sdks</module>
     </modules>
 
     <licenses>

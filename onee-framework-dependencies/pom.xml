@@ -31,6 +31,11 @@
             <!-- own dependencies -->
             <dependency>
                 <groupId>io.onee.framework</groupId>
+                <artifactId>onee-framework-doc</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.onee.framework</groupId>
                 <artifactId>onee-framework-dependencies</artifactId>
                 <version>${project.version}</version>
             </dependency>
@@ -41,22 +46,17 @@
             </dependency>
             <dependency>
                 <groupId>io.onee.framework</groupId>
-                <artifactId>onee-framework-docs</artifactId>
+                <artifactId>onee-framework-starter</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.onee.framework</groupId>
+                <artifactId>onee-framework-sdk</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>io.onee.framework</groupId>
                 <artifactId>onee-framework-redis</artifactId>
-                <version>${project.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>io.onee.framework</groupId>
-                <artifactId>onee-framework-sdks</artifactId>
-                <version>${project.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>io.onee.framework</groupId>
-                <artifactId>onee-framework-starters</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <!-- own starter -->
@@ -87,7 +87,7 @@
                 <artifactId>hutool-all</artifactId>
                 <version>${hutool.version}</version>
             </dependency>
-            <!-- redis lock -->
+            <!-- redis -->
             <dependency>
                 <groupId>org.redisson</groupId>
                 <artifactId>redisson</artifactId>

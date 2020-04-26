@@ -4,15 +4,18 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <artifactId>onee-framework</artifactId>
+        <artifactId>onee-framework-sdk</artifactId>
         <groupId>io.onee.framework</groupId>
         <version>1.0.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>onee-framework-docs</artifactId>
-    <packaging>pom</packaging>
+    <artifactId>onee-framework-sdk-juhe</artifactId>
+    <name>onee-framework-sdk-juhe</name>
+    <description>聚合数据API接口SDK</description>
+    <url>https://www.juhe.cn</url>
 
-    <name>onee-framework-docs</name>
-    <description>框架说明文档</description>
+    <dependencies>
+
+    </dependencies>
 
 </project>
