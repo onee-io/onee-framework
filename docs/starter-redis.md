@@ -44,6 +44,30 @@
 | of.redis.retryInterval | 否 | 1500 | 失败重连间隔 |
 | of.redis.codecClassName | 否 | org.redisson.client.codec.StringCodec | 编解码类 |
 
+### 配置示例
+
+#### 单点
+
+```properties
+of.redis.single.host=127.0.0.1
+of.redis.single.port=6379
+of.redis.password=123456
+```
+
+#### 哨兵
+
+```properties
+of.redis.sentinel.master=127.0.0.1:6379
+of.redis.sentinel.nodes=127.0.0.1:6380,127.0.0.1:6381
+of.redis.password=123456
+```
+
+#### 集群
+```properties
+of.redis.cluster.nodes=127.0.0.1:6379,127.0.0.1:6380,127.0.0.1:6381
+of.redis.password=123456
+```
+
 ## 使用方式
 
 ```java
