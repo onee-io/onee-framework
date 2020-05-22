@@ -1,6 +1,6 @@
 package io.onee.framework.autoconfigure.redis;
 
-import io.onee.framework.redis.RedisUtil;
+import io.onee.framework.redis.RedisClient;
 import org.redisson.Redisson;
 import org.redisson.api.RedissonClient;
 import org.redisson.client.codec.StringCodec;
@@ -23,15 +23,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * redis工具自动装配
+ * redis 工具客户端自动装配类
  * Created by onee
  * Date: 2020/4/26 19:23
  */
 @Configuration
-@ConditionalOnClass({RedisUtil.class, Redisson.class, RedisOperations.class})
+@ConditionalOnClass({RedisClient.class, Redisson.class, RedisOperations.class})
 @AutoConfigureBefore({RedisAutoConfiguration.class})
 @EnableConfigurationProperties(RedisProperties.class)
-public class RedisUtilAutoConfiguration {
+public class RedisClientAutoConfiguration {
 
     @Autowired
     private RedisProperties properties;
@@ -116,9 +116,9 @@ public class RedisUtilAutoConfiguration {
     }
 
     @Bean
-    @ConditionalOnMissingBean({RedisUtil.class})
-    public RedisUtil redisUtil(RedissonClient redissonClient, StringRedisTemplate stringRedisTemplate) {
-        return new RedisUtil(redissonClient, stringRedisTemplate);
+    @ConditionalOnMissingBean({RedisClient.class})
+    public RedisClient redisUtil(RedissonClient redissonClient, StringRedisTemplate stringRedisTemplate) {
+        return new RedisClient(redissonClient, stringRedisTemplate);
     }
 
     /**

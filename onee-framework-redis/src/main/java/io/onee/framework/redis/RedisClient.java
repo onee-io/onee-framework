@@ -17,13 +17,13 @@ import java.util.Map.Entry;
 import java.util.concurrent.TimeUnit;
 
 /**
- * redis工具类
+ * redis 组件客户端
  * Created by onee
  * Date: 2020/4/26 17:41
  */
 @Data
 @AllArgsConstructor
-public class RedisUtil {
+public class RedisClient {
 
     private RedissonClient redissonClient;
 
