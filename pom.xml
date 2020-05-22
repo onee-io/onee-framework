@@ -30,9 +30,9 @@
 
     <scm>
         <tag>master</tag>
-        <url>https://gitlab.com/onee-person/java/onee-framework.git</url>
-        <connection>scm:git:https://gitlab.com/onee-person/java/onee-framework.git</connection>
-        <developerConnection>scm:git:git@gitlab.com:onee-person/java/onee-framework.git</developerConnection>
+        <url>https://github.com/onee-io/onee-framework.git</url>
+        <connection>scm:git:https://github.com/onee-io/onee-framework.git</connection>
+        <developerConnection>scm:git:git@github.com:onee-io/onee-framework.git</developerConnection>
     </scm>
 
     <developers>
