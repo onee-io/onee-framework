@@ -14,7 +14,7 @@
 
 ```xml
 <dependency>
-    <groupId>io.onee.framework</groupId>
+    <groupId>io.onee</groupId>
     <artifactId>onee-framework-starter-redis</artifactId>
     <version>1.0.0</version>
 </dependency>

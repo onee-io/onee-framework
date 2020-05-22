@@ -3,7 +3,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>io.onee.framework</groupId>
+    <groupId>io.onee</groupId>
     <artifactId>onee-framework-dependencies</artifactId>
     <version>1.0.0</version>
     <packaging>pom</packaging>
@@ -30,33 +30,33 @@
             </dependency>
             <!-- own dependencies -->
             <dependency>
-                <groupId>io.onee.framework</groupId>
+                <groupId>io.onee</groupId>
                 <artifactId>onee-framework-dependencies</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>io.onee.framework</groupId>
+                <groupId>io.onee</groupId>
                 <artifactId>onee-framework-common</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>io.onee.framework</groupId>
+                <groupId>io.onee</groupId>
                 <artifactId>onee-framework-starter</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>io.onee.framework</groupId>
+                <groupId>io.onee</groupId>
                 <artifactId>onee-framework-sdk</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>io.onee.framework</groupId>
+                <groupId>io.onee</groupId>
                 <artifactId>onee-framework-redis</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <!-- own starter -->
             <dependency>
-                <groupId>io.onee.framework</groupId>
+                <groupId>io.onee</groupId>
                 <artifactId>onee-framework-starter-redis</artifactId>
                 <version>${project.version}</version>
             </dependency>
