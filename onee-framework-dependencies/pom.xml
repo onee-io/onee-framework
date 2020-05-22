@@ -31,11 +31,6 @@
             <!-- own dependencies -->
             <dependency>
                 <groupId>io.onee.framework</groupId>
-                <artifactId>onee-framework-doc</artifactId>
-                <version>${project.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>io.onee.framework</groupId>
                 <artifactId>onee-framework-dependencies</artifactId>
                 <version>${project.version}</version>
             </dependency>

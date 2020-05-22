@@ -13,7 +13,6 @@
     <url>https://framework.onee.io</url>
 
     <modules>
-        <module>onee-framework-doc</module>
         <module>onee-framework-dependencies</module>
         <module>onee-framework-common</module>
         <module>onee-framework-starter</module>
@@ -30,15 +29,14 @@
 
     <scm>
         <tag>master</tag>
-        <url>https://github.com/onee-io/onee-framework.git</url>
-        <connection>scm:git:https://github.com/onee-io/onee-framework.git</connection>
-        <developerConnection>scm:git:git@github.com:onee-io/onee-framework.git</developerConnection>
+        <url>git@github.com:onee-io/onee-framework.git</url>
+        <connection>scm:git@github.com:onee-io/onee-framework.git</connection>
+        <developerConnection>scm:git@github.com:onee-io/onee-framework.git</developerConnection>
     </scm>
 
     <developers>
         <developer>
             <id>onee</id>
-            <name>王宇</name>
             <email>wangyu@onee.io</email>
             <url>https://onee.io</url>
         </developer>
