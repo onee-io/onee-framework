@@ -16,8 +16,6 @@
     <url>三方接口封装SDK</url>
 
     <modules>
-        <module>onee-framework-sdk-juhe</module>
-        <module>onee-framework-sdk-qiniu</module>
     </modules>
 
     <dependencies>

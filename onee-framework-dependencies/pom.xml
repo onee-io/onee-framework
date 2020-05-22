@@ -65,22 +65,8 @@
                 <artifactId>onee-framework-starter-redis</artifactId>
                 <version>${project.version}</version>
             </dependency>
-            <dependency>
-                <groupId>io.onee.framework</groupId>
-                <artifactId>onee-framework-starter-juhe</artifactId>
-                <version>${project.version}</version>
-            </dependency>
             <!-- own sdk -->
-            <dependency>
-                <groupId>io.onee.framework</groupId>
-                <artifactId>onee-framework-sdk-juhe</artifactId>
-                <version>${project.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>io.onee.framework</groupId>
-                <artifactId>onee-framework-sdk-qiniu</artifactId>
-                <version>${project.version}</version>
-            </dependency>
+
             <!-- third part -->
             <dependency>
                 <groupId>com.alibaba</groupId>
