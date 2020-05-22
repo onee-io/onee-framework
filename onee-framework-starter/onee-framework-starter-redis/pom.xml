@@ -6,7 +6,7 @@
     <parent>
         <artifactId>onee-framework-starter</artifactId>
         <groupId>io.onee.framework</groupId>
-        <version>1.0.0-SNAPSHOT</version>
+        <version>1.0.0</version>
     </parent>
 
     <artifactId>onee-framework-starter-redis</artifactId>
