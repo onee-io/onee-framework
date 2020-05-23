@@ -8,6 +8,8 @@
 
 ## 安装
 
+仓库地址：[onee-framework-starter-redis](https://search.maven.org/artifact/io.onee/onee-framework-starter-redis)
+
 ### Maven
 
 在 `pom.xml` 中添加以下依赖：
@@ -63,6 +65,7 @@ of.redis.password=123456
 ```
 
 #### 集群
+
 ```properties
 of.redis.cluster.nodes=127.0.0.1:6379,127.0.0.1:6380,127.0.0.1:6381
 of.redis.password=123456
