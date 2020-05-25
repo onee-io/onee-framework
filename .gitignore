@@ -41,7 +41,6 @@ pom.xml.next
 *.project
 *.classpath
 .settings/
-bin/
 
 #######################
 # Custom Ignore files #
