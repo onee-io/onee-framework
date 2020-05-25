@@ -13,7 +13,7 @@ import java.io.Serializable;
  */
 @Data
 @JsonInclude(JsonInclude.Include.NON_NULL)
-public class Result<T extends Serializable> implements Serializable {
+public class Result<T> implements Serializable {
     private static final long serialVersionUID = 1L;
 
     private String code;    // 返回码
@@ -40,28 +40,28 @@ public class Result<T extends Serializable> implements Serializable {
     /**
      * 成功返回（不带数据）
      */
-    public static <T extends Serializable> Result<T> success() {
+    public static <T> Result<T> success() {
         return new Result<>(ResultCode.OK);
     }
 
     /**
      * 成功返回（带数据）
      */
-    public static <T extends Serializable> Result<T> success(T data) {
+    public static <T> Result<T> success(T data) {
         return new Result<>(ResultCode.OK, data);
     }
 
     /**
      * 失败返回（不带数据）
      */
-    public static <T extends Serializable> Result<T> failure(ResultCode resultCode) {
+    public static <T> Result<T> failure(ResultCode resultCode) {
         return new Result<>(resultCode);
     }
 
     /**
      * 失败返回（带数据）
      */
-    public static <T extends Serializable> Result<T> failure(ResultCode resultCode, T data) {
+    public static <T> Result<T> failure(ResultCode resultCode, T data) {
         return new Result<>(resultCode, data);
     }
 
