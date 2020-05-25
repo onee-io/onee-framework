@@ -18,7 +18,7 @@
 <dependency>
     <groupId>io.onee</groupId>
     <artifactId>onee-framework-starter-redis</artifactId>
-    <version>1.0.0</version>
+    <version>1.1.0-SNAPSHOT</version>
 </dependency>
 ```
 
