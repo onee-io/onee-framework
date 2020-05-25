@@ -1,8 +1,9 @@
 # onee framwork
 
-[![maven central](https://img.shields.io/maven-central/v/io.onee/onee-framework.svg?label=Maven%20Central)](https://search.maven.org/search?q=g:%22io.onee%22)
-[![license](https://img.shields.io/:license-MulanPSL2-blue.svg)](https://license.coscl.org.cn/MulanPSL2/)
-[![jdk](https://img.shields.io/badge/JDK-8+-green.svg)](https://www.oracle.com/technetwork/java/javase/downloads/index.html)
+[![GitHub Release](https://img.shields.io/github/release/onee-io/onee-framework.svg)](https://github.com/onee-io/onee-framework/releases)
+[![Maven Central](https://img.shields.io/maven-central/v/io.onee/onee-framework.svg)](https://search.maven.org/search?q=g:%22io.onee%22)
+[![License](https://img.shields.io/:license-MulanPSL2-blue.svg)](https://license.coscl.org.cn/MulanPSL2/)
+[![JDK](https://img.shields.io/badge/JDK-8+-green.svg)](https://www.oracle.com/technetwork/java/javase/downloads/index.html)
 
 Spring Boot 项目快速开发框架，用于规范项目开发，提供公共类库、中间件、三方服务 SDK 等组件的快速集成能力，避免重复造轮子，提高效率，保证代码质量。
 
