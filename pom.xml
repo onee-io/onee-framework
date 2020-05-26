@@ -93,7 +93,11 @@
                 <version>${project.version}</version>
             </dependency>
             <!-- own sdk -->
-
+            <dependency>
+                <groupId>io.onee</groupId>
+                <artifactId>onee-framework-sdk-storage</artifactId>
+                <version>${project.version}</version>
+            </dependency>
             <!-- third part -->
             <dependency>
                 <groupId>com.alibaba</groupId>
