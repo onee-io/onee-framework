@@ -17,6 +17,7 @@
         <module>onee-framework-starter</module>
         <module>onee-framework-sdk</module>
         <module>onee-framework-redis</module>
+        <module>onee-framework-sample</module>
     </modules>
 
     <licenses>
@@ -90,6 +91,11 @@
             <dependency>
                 <groupId>io.onee</groupId>
                 <artifactId>onee-framework-starter-redis</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.onee</groupId>
+                <artifactId>onee-framework-starter-storage</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <!-- own sdk -->

@@ -19,6 +19,11 @@ Spring Boot 项目快速开发框架，用于规范项目开发，提供公共�
 
 - `redis`: 提供单点、哨兵、集群模式初始化客户端，并提供分布式锁操作；
 
+## 三方服务 SDK
+
+- `storage`: 提供云服务资源存储；
+
 ## 快速集成 starter
 
 - [onee-framework-starter-redis](./docs/starter-redis.md)
+- [onee-framework-starter-storage](./docs/starter-storage.md)

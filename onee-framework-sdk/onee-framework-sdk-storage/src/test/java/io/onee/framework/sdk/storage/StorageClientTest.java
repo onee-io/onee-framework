@@ -43,19 +43,15 @@ public class StorageClientTest {
         int currentBucketCount1 = bucketList1.size();
         Assert.assertEquals(currentBucketCount + 1, currentBucketCount1);
         // 上传文件
-        String key1 = IdUtil.simpleUUID();
-        Resource resource1 = storageClient.uploadResource(key1, FileUtil.file("E:\\images\\prize-list1.png"));
-        String key2 = IdUtil.simpleUUID();
-        Resource resource2 = storageClient.uploadResource(key2, FileUtil.file("E:\\images\\prize-list2.png"));
-        String key3 = IdUtil.simpleUUID();
-        Resource resource3 = storageClient.uploadResource(key3, FileUtil.file("E:\\images\\prize-list3.png"));
-        String key4 = IdUtil.simpleUUID();
-        Resource resource4 = storageClient.uploadResource(key4, FileUtil.file("E:\\images\\prize-list4.png"));
+        Resource resource1 = storageClient.uploadResource("E:\\images\\prize-list1.png");
+        Resource resource2 = storageClient.uploadResource(FileUtil.file("E:\\images\\prize-list2.png"));
+        Resource resource3 = storageClient.uploadResource(FileUtil.getInputStream("E:\\images\\prize-list3.png"));
+        Resource resource4 = storageClient.uploadResource(FileUtil.readBytes("E:\\images\\prize-list4.png"));
         // 获取文件访问连接
         System.out.println("resource1 public url: " + resource1.getPublicUrl());
-        System.out.println("resource2 public url: " + storageClient.getPublicUrl(key2));
-        System.out.println("resource3 private url: " + storageClient.getPrivateUrl(key3));
-        System.out.println("resource4 private url: " + storageClient.getPrivateUrl(key4, 60));
+        System.out.println("resource2 public url: " + storageClient.getPublicUrl(resource2.getKey()));
+        System.out.println("resource3 private url: " + storageClient.getPrivateUrl(resource3.getKey()));
+        System.out.println("resource4 private url: " + storageClient.getPrivateUrl(resource4.getKey(), 60));
         // 删除资源
         boolean result1 = storageClient.deleteResource(resource1);
         boolean result2 = storageClient.deleteResource(resource2.getKey());

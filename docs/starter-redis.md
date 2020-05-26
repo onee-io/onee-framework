@@ -1,6 +1,6 @@
 # onee-framework-starter-redis
 
-在 spring boot 项目中快速集成一账通服务组件
+在 spring boot 项目中快速集成 redis 服务组件
 
 ## 模式
 
@@ -72,6 +72,8 @@ of.redis.password=123456
 ```
 
 ## 使用方式
+
+代码示例：[StorageSample](../onee-framework-sample/src/main/java/io/onee/framework/sample/RedisSample.java)
 
 ```java
 @Autowired

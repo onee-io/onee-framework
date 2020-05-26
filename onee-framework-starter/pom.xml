@@ -17,6 +17,7 @@
 
     <modules>
         <module>onee-framework-starter-redis</module>
+        <module>onee-framework-starter-storage</module>
     </modules>
 
     <dependencies>

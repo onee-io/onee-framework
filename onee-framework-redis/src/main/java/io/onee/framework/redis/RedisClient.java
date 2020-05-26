@@ -2,8 +2,8 @@ package io.onee.framework.redis;
 
 import io.onee.framework.common.distributed.lock.DistributedReentrantLock;
 import io.onee.framework.redis.lock.RedisReentrantLock;
-import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.extern.slf4j.Slf4j;
 import org.redisson.api.RedissonClient;
 import org.springframework.data.redis.connection.DataType;
 import org.springframework.data.redis.core.Cursor;
@@ -22,12 +22,18 @@ import java.util.concurrent.TimeUnit;
  * Date: 2020/4/26 17:41
  */
 @Data
-@AllArgsConstructor
+@Slf4j
 public class RedisClient {
 
     private RedissonClient redissonClient;
 
     private StringRedisTemplate redisTemplate;
+
+    public RedisClient(RedissonClient redissonClient, StringRedisTemplate redisTemplate) {
+        this.redissonClient = redissonClient;
+        this.redisTemplate = redisTemplate;
+        log.info("redis client is initialized.");
+    }
 
     // ------------------redis分布式锁-------------------- //
 

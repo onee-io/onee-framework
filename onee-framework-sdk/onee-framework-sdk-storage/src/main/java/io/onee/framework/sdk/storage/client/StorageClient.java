@@ -51,6 +51,38 @@ public interface StorageClient {
     /**
      * 资源上传到默认空间（初始化时指定）
      *
+     * @param file 文件对象
+     * @return 资源数据，默认生成 uuid 作为资源 key
+     */
+    Resource uploadResource(File file);
+
+    /**
+     * 资源上传到默认空间（初始化时指定）
+     *
+     * @param filePath 文件路径
+     * @return 资源数据，默认生成 uuid 作为资源 key
+     */
+    Resource uploadResource(String filePath);
+
+    /**
+     * 资源上传到默认空间（初始化时指定）
+     *
+     * @param inputStream 文件流
+     * @return 资源数据，默认生成 uuid 作为资源 key
+     */
+    Resource uploadResource(InputStream inputStream);
+
+    /**
+     * 资源上传到默认空间（初始化时指定）
+     *
+     * @param fileBytes 文件字节数组
+     * @return 资源数据，默认生成 uuid 作为资源 key
+     */
+    Resource uploadResource(byte[] fileBytes);
+
+    /**
+     * 资源上传到默认空间（初始化时指定）
+     *
      * @param key  文件唯一标识
      * @param file 文件对象
      * @return 资源数据

@@ -63,6 +63,7 @@ public class QiniuStorageClient implements StorageClient {
         this.bucketManager = new BucketManager(this.auth, configuration);
         this.uploadManager = new UploadManager(configuration);
         this.defaultBucketName = bucket;
+        log.info("qiniu storage client is initialized.");
     }
 
     @Override
@@ -111,6 +112,26 @@ public class QiniuStorageClient implements StorageClient {
             log.error("七牛云-创建空间异常, bucketName={}, errMsg={}", bucketName, e.getMessage());
         }
         return null;
+    }
+
+    @Override
+    public Resource uploadResource(File file) {
+        return uploadResource(getUnionKey(null), file);
+    }
+
+    @Override
+    public Resource uploadResource(String filePath) {
+        return uploadResource(getUnionKey(null), filePath);
+    }
+
+    @Override
+    public Resource uploadResource(InputStream inputStream) {
+        return uploadResource(getUnionKey(null), inputStream);
+    }
+
+    @Override
+    public Resource uploadResource(byte[] fileBytes) {
+        return uploadResource(getUnionKey(null), fileBytes);
     }
 
     @Override
@@ -181,8 +202,7 @@ public class QiniuStorageClient implements StorageClient {
 
     @Override
     public String getPrivateUrl(String bucketName, String key) {
-        Assert.notBlank(key);
-        return auth.privateDownloadUrl(getPublicUrl(bucketName, key));
+        return getPrivateUrl(bucketName, key, 3600);
     }
 
     @Override
@@ -193,8 +213,7 @@ public class QiniuStorageClient implements StorageClient {
 
     @Override
     public boolean deleteResource(Resource resource) {
-        String bucketName = StrUtil.isBlank(resource.getBucketName()) ? defaultBucketName : resource.getBucketName();
-        return deleteResource(bucketName, resource.getKey());
+        return deleteResource(getBucketName(resource.getBucketName()), resource.getKey());
     }
 
     @Override
@@ -237,6 +256,16 @@ public class QiniuStorageClient implements StorageClient {
             log.error("七牛云-上传文件异常, key={}, errMsg={}", key, e.getMessage());
         }
         return null;
+    }
+
+    /**
+     * 获取空间名称
+     *
+     * @param bucketName 空间名称
+     * @return 优先使用外部传入名称，否则使用默认空间名称
+     */
+    String getBucketName(String bucketName) {
+        return StrUtil.isBlank(bucketName) ? defaultBucketName : bucketName;
     }
 
     /**

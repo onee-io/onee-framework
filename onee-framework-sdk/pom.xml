@@ -21,10 +21,6 @@
 
     <dependencies>
         <dependency>
-            <groupId>io.onee</groupId>
-            <artifactId>onee-framework-common</artifactId>
-        </dependency>
-        <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
         </dependency>
