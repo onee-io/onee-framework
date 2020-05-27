@@ -2,7 +2,6 @@ package io.onee.framework.sdk.storage.client;
 
 import cn.hutool.core.io.FileUtil;
 import cn.hutool.core.io.IoUtil;
-import cn.hutool.core.lang.Assert;
 import cn.hutool.core.util.IdUtil;
 import cn.hutool.core.util.StrUtil;
 import com.qiniu.http.Response;
@@ -14,6 +13,7 @@ import io.onee.framework.sdk.storage.dto.Bucket;
 import io.onee.framework.sdk.storage.dto.Region;
 import io.onee.framework.sdk.storage.dto.Resource;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.util.Assert;
 
 import java.io.File;
 import java.io.InputStream;
@@ -82,14 +82,14 @@ public class QiniuStorageClient implements StorageClient {
 
     @Override
     public Bucket getBucket(String bucketName) {
-        Assert.notBlank(bucketName);
+        Assert.hasText(bucketName, "bucketName must have value");
         String domainOfBucket = getDomainOfBucket(bucketName);
         return domainOfBucket != null ? Bucket.builder().BucketName(bucketName).domainOfBucket(domainOfBucket).build() : null;
     }
 
     @Override
     public String getDomainOfBucket(String bucketName) {
-        Assert.notBlank(bucketName);
+        Assert.hasText(bucketName, "bucketName must have value");
         try {
             String[] domains = bucketManager.domainList(bucketName);
             return domains.length > 0 ? domains[domains.length - 1] : null;
@@ -191,7 +191,7 @@ public class QiniuStorageClient implements StorageClient {
 
     @Override
     public String getPublicUrl(String bucketName, String key) {
-        Assert.notBlank(key);
+        Assert.hasText(key, "key must have value");
         String domainOfBucket = getDomainOfBucket(bucketName);
         if (domainOfBucket.startsWith("http://") || domainOfBucket.startsWith("https://")) {
             return String.format("%s/%s", domainOfBucket, key);
@@ -207,7 +207,7 @@ public class QiniuStorageClient implements StorageClient {
 
     @Override
     public String getPrivateUrl(String bucketName, String key, long expire) {
-        Assert.notBlank(key);
+        Assert.hasText(key, "key must have value");
         return auth.privateDownloadUrl(getPublicUrl(bucketName, key), expire);
     }
 
