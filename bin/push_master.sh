@@ -1,10 +1,9 @@
 #!/bin/bash
 
-echo -e "\033[32mCheckout to master\033[0m"
+# 脚本说明：合并 dev 分支到 master 分支
+
+set -o errexit
+
 git checkout master
-
-echo -e "\033[32mMerge dev branch\033[0m"
 git merge dev -m 'Prepare release'
-
-echo -e "\033[32mPush to origin master\033[0m"
 git push origin master
