@@ -58,3 +58,16 @@ of.storage.qiniu.bucket=onee
 @Autowired
 private StorageClient qiniuStorageClient; // 七牛云存储客户端
 ```
+
+## 方法说明
+
+| 方法名 | 说明 |
+| ---- | ---- |
+| getAllBucket | 获取空间列表 |
+| getBucket | 获取空间信息 |
+| getDomainOfBucket | 获取空间域名 |
+| createBucket | 创建空间 |
+| uploadResource | 上传资源文件 |
+| getPublicUrl | 获取资源文件公网访问地址 |
+| getPrivateUrl | 获取资源文件私网访问地址 |
+| deleteResource | 删除资源文件 |
