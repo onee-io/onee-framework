@@ -96,6 +96,11 @@
             <!-- own starter -->
             <dependency>
                 <groupId>io.onee</groupId>
+                <artifactId>onee-framework-starter-log</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.onee</groupId>
                 <artifactId>onee-framework-starter-redis</artifactId>
                 <version>${project.version}</version>
             </dependency>

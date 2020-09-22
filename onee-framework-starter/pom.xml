@@ -16,6 +16,7 @@
     <description>开箱即用starter</description>
 
     <modules>
+        <module>onee-framework-starter-log</module>
         <module>onee-framework-starter-redis</module>
         <module>onee-framework-starter-storage</module>
     </modules>
