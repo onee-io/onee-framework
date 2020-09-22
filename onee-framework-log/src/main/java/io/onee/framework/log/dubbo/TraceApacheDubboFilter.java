@@ -9,7 +9,6 @@ import org.slf4j.MDC;
  * Dubbo 日志跟踪过滤器
  * 在 consumer和 provider中配置此过滤器，会自动提取 invocation的中的 traceId并传递下去
  * 过滤器会提取请求方的 ip，无需手动处理
- * 例：<dubbo:consumer filter="traceApacheDubboFilter" />
  *
  * @author onee
  * @since 1.2.0
