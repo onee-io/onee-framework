@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration scan="true" scanPeriod="60 seconds" debug="false">
+
+    <!-- 自定义配置 -->
+    <property name="log.appName" value="application-name" />
+    <property name="log.path" value="/opt/logs" />
+    <property name="log.level" value="INFO" />
+    <property name="log.filePattern" value="%d{yyyy-MM-dd HH:mm:ss.SSS}|%level|%thread|%X{clientIp}|%X{traceId}|%c.%M[%L]|%msg%n" />
+    <property name="log.consolePattern" value="%red(%d{yyyy-MM-dd HH:mm:ss.SSS})|%highlight(%level)|%green(%thread)|%X{clientIp}|%X{traceId}|%boldMagenta(%c.%M[%L])|%cyan(%msg%n)" />
+
+    <!-- 日志消息转换器 -->
+    <conversionRule conversionWord="msg" converterClass="io.onee.framework.log.convert.SensitiveConverter" />
+
+    <!--控制台输出-->
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <charset>UTF-8</charset>
+            <pattern>${log.consolePattern}</pattern>
+        </encoder>
+    </appender>
+
+    <!-- 日志文件 -->
+    <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <!--
+            按照时间与文件大小两个维度进行分割文件,%d{yyyy-MM-dd}代表按天分割,%d{yyyy-MM-dd-HH}代表按小时分割
+            maxHistory最大保留文件时间数,按天分割代表几天,小时分割则代表几个小时
+            maxFileSize单文件最大容量,超过则增加%i的值
+            totalSizeCap总计文件容量
+        -->
+        <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+            <FileNamePattern>${log.path}/${log.appName}/${log.appName}.%d{yyyy-MM-dd}.%i.log</FileNamePattern>
+            <maxHistory>15</maxHistory>
+            <maxFileSize>500MB</maxFileSize>
+            <totalSizeCap>20GB</totalSizeCap>
+        </rollingPolicy>
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <pattern>${log.filePattern}</pattern>
+            <charset>UTF-8</charset>
+        </encoder>
+    </appender>
+
+    <!--
+        异步文件
+        queueSize:BlockingQueue最大容量,默认为256,要看具体业务规模来调整此参数
+        discardingThreshold:不丢弃任何日志，设置该值为0。默认情况下，当BlockingQueue还有20%容量，他将丢弃TRACE、DEBUG和INFO级别的event，只保留WARN和ERROR级别的event。
+        includeCallerData:是否包含调用者的信息(方法名及行号),AsyncAppender默认为false,只有一些获取代价较低的数据，如线程名称，MDC值才会被保留。如果设置为true，就会包含caller data
+    -->
+    <appender name="ASYNC_FILE" class="ch.qos.logback.classic.AsyncAppender">
+        <queueSize>512</queueSize>
+        <discardingThreshold>0</discardingThreshold>
+        <includeCallerData>true</includeCallerData>
+        <appender-ref ref="FILE" />
+    </appender>
+
+    <root level="${log.level}" >
+        <appender-ref ref="STDOUT" />
+        <appender-ref ref="ASYNC_FILE" />
+    </root>
+
+</configuration>  

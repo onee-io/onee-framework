@@ -1,0 +1,1 @@
+traceApacheDubboFilter=io.onee.framework.log.dubbo.TraceApacheDubboFilter

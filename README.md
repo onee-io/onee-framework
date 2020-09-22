@@ -18,6 +18,7 @@ Spring Boot 项目快速开发框架，用于规范项目开发，提供公共�
 ## 中间件
 
 - `redis`: 提供单点、哨兵、集群模式初始化客户端，并提供分布式锁操作；
+- `log`: 提供日志规范及跟踪能力；
 
 ## 三方服务 SDK
 
@@ -27,3 +28,4 @@ Spring Boot 项目快速开发框架，用于规范项目开发，提供公共�
 
 - [onee-framework-starter-redis](./docs/starter-redis.md)
 - [onee-framework-starter-storage](./docs/starter-storage.md)
+- [onee-framework-starter-log](./docs/starter-log.md)

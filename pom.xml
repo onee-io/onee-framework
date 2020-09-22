@@ -16,6 +16,7 @@
         <module>onee-framework-common</module>
         <module>onee-framework-starter</module>
         <module>onee-framework-sdk</module>
+        <module>onee-framework-log</module>
         <module>onee-framework-redis</module>
         <module>onee-framework-sample</module>
     </modules>
@@ -80,6 +81,11 @@
             <dependency>
                 <groupId>io.onee</groupId>
                 <artifactId>onee-framework-sdk</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.onee</groupId>
+                <artifactId>onee-framework-log</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>

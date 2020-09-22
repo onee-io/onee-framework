@@ -2,8 +2,9 @@ package io.onee.framework.common.exception;
 
 /**
  * 业务异常类
- * Created by onee
- * Date: 2020/4/26 17:32
+ *
+ * @author onee
+ * @since 1.0.0
  */
 public class BusinessException extends BaseException {
 

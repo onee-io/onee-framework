@@ -8,17 +8,29 @@ import java.io.Serializable;
 
 /**
  * api接口标准返回格式
- * Created by onee
- * Date: 2020/4/26 14:52
+ *
+ * @author onee
+ * @since 1.0.0
  */
 @Data
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class Result<T> implements Serializable {
     private static final long serialVersionUID = 1L;
 
-    private String code;    // 返回码
-    private String message; // 返回信息
-    private T data;         // 数据
+    /**
+     * 返回码
+     */
+    private String code;
+
+    /**
+     * 返回信息
+     */
+    private String message;
+
+    /**
+     * 数据
+     */
+    private T data;
 
     /**
      * 私有初始化方法，只允许使用提供的静态方法初始化

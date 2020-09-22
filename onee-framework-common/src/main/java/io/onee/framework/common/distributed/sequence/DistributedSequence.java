@@ -2,8 +2,9 @@ package io.onee.framework.common.distributed.sequence;
 
 /**
  * 分布式序列
- * Created by onee
- * Date: 2020/4/26 16:49
+ *
+ * @author onee
+ * @since 1.0.0
  */
 public interface DistributedSequence {
 

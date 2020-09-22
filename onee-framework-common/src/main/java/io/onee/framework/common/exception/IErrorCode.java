@@ -2,8 +2,9 @@ package io.onee.framework.common.exception;
 
 /**
  * 错误码结构
- * Created by onee
- * Date: 2020/4/26 17:02
+ *
+ * @author onee
+ * @since 1.0.0
  */
 public interface IErrorCode {
 

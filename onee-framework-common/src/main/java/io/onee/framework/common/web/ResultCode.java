@@ -8,8 +8,9 @@ import lombok.Getter;
  * ap 接口标准错误码
  * 根据阿里《Java开发手册》泰山版定义
  * https://developer.aliyun.com/topic/java2020
- * Created by onee
- * Date: 2020/4/26 14:55
+ *
+ * @author onee
+ * @since 1.0.0
  */
 @Getter
 @AllArgsConstructor
@@ -213,6 +214,13 @@ public enum ResultCode implements IErrorCode {
     C0502("C0502", "语音提醒服务失败"),
     C0503("C0503", "邮件提醒服务失败");
 
-    private String code;    // 错误码
-    private String message; // 错误信息
+    /**
+     * 错误码
+     */
+    private final String code;
+
+    /**
+     * 错误信息
+     */
+    private final String message;
 }

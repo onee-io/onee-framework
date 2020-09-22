@@ -5,8 +5,9 @@ import lombok.EqualsAndHashCode;
 
 /**
  * 基础异常类
- * Created by onee
- * Date: 2020/4/26 17:10
+ *
+ * @author onee
+ * @since 1.0.0
  */
 @Data
 @EqualsAndHashCode(callSuper = true)
