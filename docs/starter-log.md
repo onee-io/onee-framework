@@ -12,7 +12,7 @@
 <dependency>
     <groupId>io.onee</groupId>
     <artifactId>onee-framework-starter-log</artifactId>
-    <version>1.2.0-SNAPSHOT</version>
+    <version>1.2.0</version>
 </dependency>
 ```
 
