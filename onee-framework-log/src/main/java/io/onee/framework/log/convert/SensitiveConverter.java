@@ -7,7 +7,6 @@ import io.onee.framework.log.util.SensitiveUtil;
 /**
  * 日志脱敏转换器
  * 适用于 logback 日志框架，配置在 conversionRule 中，可替换所有日志中的敏感信息
- * 例：<conversionRule conversionWord="msg" converterClass="io.onee.framework.log.convert.SensitiveConverter" />
  *
  * @author onee
  * @since 1.2.0
