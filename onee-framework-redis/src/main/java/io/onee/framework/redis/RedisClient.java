@@ -468,7 +468,7 @@ public class RedisClient {
     /**
      * 移出并获取列表的第一个元素， 如果列表没有元素会阻塞列表直到等待超时或发现可弹出元素为止
      */
-    public String lBLeftPop(String key, long timeout, TimeUnit unit) {
+    public String lLeftPop(String key, long timeout, TimeUnit unit) {
         return redisTemplate.opsForList().leftPop(key, timeout, unit);
     }
 
@@ -482,7 +482,7 @@ public class RedisClient {
     /**
      * 移出并获取列表的最后一个元素，如果列表没有元素会阻塞列表直到等待超时或发现可弹出元素为止
      */
-    public String lBRightPop(String key, long timeout, TimeUnit unit) {
+    public String lRightPop(String key, long timeout, TimeUnit unit) {
         return redisTemplate.opsForList().rightPop(key, timeout, unit);
     }
 
@@ -652,7 +652,7 @@ public class RedisClient {
     /**
      * 获取集合所有元素
      */
-    public Set<String> setMembers(String key) {
+    public Set<String> sMembers(String key) {
         return redisTemplate.opsForSet().members(key);
     }
 
