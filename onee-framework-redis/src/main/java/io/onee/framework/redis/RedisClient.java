@@ -278,7 +278,13 @@ public class RedisClient {
      * 获取所有给定字段的值
      */
     public Map<Object, Object> hGetAll(String key) {
-        return redisTemplate.opsForHash().entries(key);
+        Map<Object, Object> map = new HashMap<>();
+        Cursor<Map.Entry<Object, Object>> cursor = redisTemplate.opsForHash().scan(key, ScanOptions.scanOptions().build());
+        while (cursor.hasNext()) {
+            Map.Entry<Object, Object> entry = cursor.next();
+            map.put(entry.getKey(), entry.getValue());
+        }
+        return map;
     }
 
     /**
