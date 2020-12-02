@@ -24,8 +24,8 @@ import java.util.List;
 
 /**
  * redis 工具客户端自动装配类
- * Created by onee
- * Date: 2020/4/26 19:23
+ *
+ * @author onee
  */
 @Configuration
 @ConditionalOnClass({RedisClient.class, Redisson.class, RedisOperations.class})
@@ -41,6 +41,7 @@ public class RedisClientAutoConfiguration {
     public RedissonClient redissonClient() {
         // 构建redisson连接配置
         Config config = new Config();
+        config.setLockWatchdogTimeout(properties.getLockWatchdogTimeout());
         config.setCodec(new StringCodec());
         if (properties.getSentinel() != null) {
             // 哨兵模式配置

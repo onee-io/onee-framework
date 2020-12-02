@@ -7,8 +7,8 @@ import java.util.List;
 
 /**
  * redis配置属性类
- * Created by onee
- * Date: 2020/4/26 19:20
+ *
+ * @author onee
  */
 @Data
 @ConfigurationProperties("of.redis")
@@ -68,6 +68,11 @@ public class RedisProperties {
      * 失败重连间隔
      */
     private int retryInterval = 1500;
+
+    /**
+     * 看门狗超时时间
+     */
+    private long lockWatchdogTimeout = 5000;
 
     /**
      * 编解码类

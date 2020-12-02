@@ -8,8 +8,8 @@ import java.util.concurrent.TimeUnit;
 
 /**
  * redis分布式锁
- * Created by onee
- * Date: 2020/4/26 16:26
+ *
+ * @author onee
  */
 public class RedisReentrantLock implements DistributedReentrantLock {
 
@@ -30,6 +30,15 @@ public class RedisReentrantLock implements DistributedReentrantLock {
     public void lock(long leaseTime, TimeUnit unit) {
         try {
             this.lock.lock(leaseTime, unit);
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    @Override
+    public boolean tryLock() throws InterruptedException {
+        try {
+            return this.lock.tryLock();
         } catch (Exception e) {
             throw new RuntimeException(e);
         }

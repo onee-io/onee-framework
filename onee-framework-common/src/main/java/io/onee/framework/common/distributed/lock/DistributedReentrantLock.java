@@ -26,6 +26,13 @@ public interface DistributedReentrantLock {
     /**
      * 尝试获取锁
      *
+     * @return 拿到锁返回 true，否则 false
+     */
+    boolean tryLock() throws InterruptedException;
+
+    /**
+     * 尝试获取锁
+     *
      * @param waitTime 等待时间
      * @param unit     时间单位
      * @return 等待时间内拿到锁返回 true，否则 false
@@ -36,7 +43,7 @@ public interface DistributedReentrantLock {
      * 尝试获取锁
      *
      * @param waitTime  等待时间
-     * @param leaseTime 锁持有时间（到期释放锁）
+     * @param leaseTime 释放时间
      * @param unit      时间单位
      * @return 等待时间内拿到锁返回 true，否则 false
      */
