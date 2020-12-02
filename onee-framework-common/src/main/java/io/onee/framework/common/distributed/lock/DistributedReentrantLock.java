@@ -28,7 +28,7 @@ public interface DistributedReentrantLock {
      *
      * @return 拿到锁返回 true，否则 false
      */
-    boolean tryLock() throws InterruptedException;
+    boolean tryLock();
 
     /**
      * 尝试获取锁

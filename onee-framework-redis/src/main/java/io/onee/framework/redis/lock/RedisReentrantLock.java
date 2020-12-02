@@ -36,7 +36,7 @@ public class RedisReentrantLock implements DistributedReentrantLock {
     }
 
     @Override
-    public boolean tryLock() throws InterruptedException {
+    public boolean tryLock() {
         try {
             return this.lock.tryLock();
         } catch (Exception e) {
