@@ -28,7 +28,7 @@
 <dependency>
     <groupId>io.onee</groupId>
     <artifactId>onee-framework-starter-storage</artifactId>
-    <version>1.2.1</version>
+    <version>1.2.2-SNAPSHOT</version>
 </dependency>
 ```
 
