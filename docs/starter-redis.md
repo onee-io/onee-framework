@@ -1,6 +1,6 @@
 # onee-framework-starter-redis
 
-在 spring boot 项目中快速集成 redis 服务组件
+在 spring boot 项目中快速集成 redis 服务组件，提供常用 redis 操作及分布式锁，支持看门狗
 
 ## 模式
 
@@ -44,6 +44,7 @@
 | of.redis.connectionMinimumIdleSize | 否 | 24 | 连接池最小空闲连接数 |
 | of.redis.retryAttempts | 否 | 3 | 失败重连尝试次数 |
 | of.redis.retryInterval | 否 | 1500 | 失败重连间隔 |
+| of.redis.lockWatchdogTimeout | 否 | 5000 | 看门狗超时时间 |
 | of.redis.codecClassName | 否 | org.redisson.client.codec.StringCodec | 编解码类 |
 
 ### 配置示例
