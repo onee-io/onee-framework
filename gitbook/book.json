@@ -1,0 +1,14 @@
+{
+    "title": "onee-framework 使用指南",
+    "author": "onee",
+    "language": "zh-hans",
+    "plugins": [
+        "-sharing",
+        "github"
+    ],
+    "pluginsConfig": {
+        "github": {
+            "url": "https://github.com/onee-io/onee-framework"
+        }
+    }
+}

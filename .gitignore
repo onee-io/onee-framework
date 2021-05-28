@@ -48,3 +48,5 @@ pom.xml.next
 _logs/
 logs/
 dependency-reduced-pom.xml
+_book
+node_modules

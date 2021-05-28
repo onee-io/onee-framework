@@ -1,4 +1,4 @@
-# 日志组件使用指南
+# 日志组件：onee-framework-starter-log
 
 ## 安装
 
@@ -24,7 +24,7 @@
 
 存放路径：`/opt/logs/${app_name}/${app_name}.${yyyy-MM-dd}.${i}.log`
 
-配置文件样例：![logback-sample.xml](../onee-framework-log/src/main/resources/logback-sample.xml)
+配置文件样例：[logback-sample.xml](https://cdn.jsdelivr.net/gh/onee-io/onee-framework/onee-framework-log/src/main/resources/logback-sample.xml)
 
 
 ## 第二步：对日志进行脱敏
