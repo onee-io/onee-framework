@@ -4,6 +4,7 @@
     "language": "zh-hans",
     "plugins": [
         "-sharing",
+        "-livereload",
         "github"
     ],
     "pluginsConfig": {
