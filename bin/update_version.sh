@@ -3,7 +3,7 @@
 #------------------------------------------------
 # 升级 onee-framework 版本，包括：
 # 1. 升级 pom.xml 中的版本号
-# 2. 替换 README.md 和 articles 中的版本号
+# 2. 替换 README.md 和 docs 中的版本号
 #------------------------------------------------
 
 set -o errexit
@@ -30,9 +30,9 @@ mvn versions:commit
 
 # 替换 README.md 中的版本
 sed -i "" "s/${old_version}/${new_version}/g" ./README.md
-sed -i "" "s/${old_version}/${new_version}/g" ./gitbook/README.md
+sed -i "" "s/${old_version}/${new_version}/g" ./docs/README.md
 # 替换 articles/* 中的版本
-sed -i "" "s/${old_version}/${new_version}/g" ./gitbook/articles/*
+sed -i "" "s/${old_version}/${new_version}/g" ./docs/zh-cn/*
 
 # 保留新版本号
 echo "$new_version" > ./bin/version.txt
