@@ -17,19 +17,19 @@ import java.util.Map.Entry;
 import java.util.concurrent.TimeUnit;
 
 /**
- * redis 组件客户端
+ * redis 组件工具包
  * Created by onee
  * Date: 2020/4/26 17:41
  */
 @Data
 @Slf4j
-public class RedisClient {
+public class RedisUtil {
 
     private RedissonClient redissonClient;
 
     private StringRedisTemplate redisTemplate;
 
-    public RedisClient(RedissonClient redissonClient, StringRedisTemplate redisTemplate) {
+    public RedisUtil(RedissonClient redissonClient, StringRedisTemplate redisTemplate) {
         this.redissonClient = redissonClient;
         this.redisTemplate = redisTemplate;
         log.info("redis client is initialized.");

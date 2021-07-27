@@ -2,6 +2,7 @@ package io.onee.framework.common.web;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude;
+import io.onee.framework.common.exception.IErrorCode;
 import lombok.Data;
 
 import java.io.Serializable;
@@ -38,12 +39,12 @@ public class Result<T> implements Serializable {
     private Result() {
     }
 
-    private Result(ResultCode resultCode) {
+    private Result(IErrorCode resultCode) {
         this.code = resultCode.getCode();
         this.message = resultCode.getMessage();
     }
 
-    private Result(ResultCode resultCode, T data) {
+    private Result(IErrorCode resultCode, T data) {
         this.code = resultCode.getCode();
         this.message = resultCode.getMessage();
         this.data = data;
@@ -66,14 +67,14 @@ public class Result<T> implements Serializable {
     /**
      * 失败返回（不带数据）
      */
-    public static <T> Result<T> failure(ResultCode resultCode) {
+    public static <T> Result<T> failure(IErrorCode resultCode) {
         return new Result<>(resultCode);
     }
 
     /**
      * 失败返回（带数据）
      */
-    public static <T> Result<T> failure(ResultCode resultCode, T data) {
+    public static <T> Result<T> failure(IErrorCode resultCode, T data) {
         return new Result<>(resultCode, data);
     }
 

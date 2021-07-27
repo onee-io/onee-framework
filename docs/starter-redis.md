@@ -78,5 +78,5 @@ of.redis.password=123456
 
 ```java
 @Autowired
-private RedisClient redisClient; // redis 工具客户端
+private RedisUtil redisUtil; // redis 工具客户端
 ```
