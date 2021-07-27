@@ -3,6 +3,7 @@ package io.onee.framework.autoconfigure.redis;
 import io.onee.framework.redis.RedisUtil;
 import org.redisson.Redisson;
 import org.redisson.api.RedissonClient;
+import org.redisson.client.codec.Codec;
 import org.redisson.client.codec.StringCodec;
 import org.redisson.config.Config;
 import org.redisson.spring.data.connection.RedissonConnectionFactory;
@@ -18,6 +19,7 @@ import org.springframework.data.redis.connection.RedisConnectionFactory;
 import org.springframework.data.redis.core.RedisOperations;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.core.StringRedisTemplate;
+import org.springframework.util.ClassUtils;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -42,7 +44,11 @@ public class RedisClientAutoConfiguration {
         // 构建redisson连接配置
         Config config = new Config();
         config.setLockWatchdogTimeout(properties.getLockWatchdogTimeout());
-        config.setCodec(new StringCodec());
+        try {
+            config.setCodec((Codec) ClassUtils.forName(properties.getCodecClassName(), ClassUtils.getDefaultClassLoader()).newInstance());
+        } catch (Exception e) {
+            config.setCodec(new StringCodec());
+        }
         if (properties.getSentinel() != null) {
             // 哨兵模式配置
             RedisProperties.Sentinel sentinel = properties.getSentinel();
