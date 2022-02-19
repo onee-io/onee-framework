@@ -15,7 +15,7 @@
     <description>日志组件</description>
 
     <properties>
-        <apache-dubbo.version>2.7.3</apache-dubbo.version>
+        <apache-dubbo.version>2.7.15</apache-dubbo.version>
         <alibaba-dubbo.version>2.6.7</alibaba-dubbo.version>
     </properties>
 
