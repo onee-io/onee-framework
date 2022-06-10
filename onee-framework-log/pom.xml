@@ -16,7 +16,7 @@
 
     <properties>
         <apache-dubbo.version>2.7.15</apache-dubbo.version>
-        <alibaba-dubbo.version>2.6.7</alibaba-dubbo.version>
+        <alibaba-dubbo.version>2.6.12</alibaba-dubbo.version>
     </properties>
 
     <dependencies>
